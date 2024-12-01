@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <title>FUTURE UNIVERSITY - STUDENT MANAGEMENT SYSTEM</title>
+    <link rel="icon" href="../images/shool-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> <!-- Search icon -->
+</head>
+
+<body>
+    <script src="../js/index.js" defer></script> <!--Javascript -->
+    <main class="row">
+        <!------------------------>
+
+        <!--Header part of the page-->
+        <header class="school-header">
+
+            <!-- Header School logo and name section-->
+            <section class="left-school-div">
+                <!--School logo part-->
+                <a href="index2.html">
+                    <div class="school-logo">
+                    </div>
+                </a>
+
+                <!--School name part-->
+                <div class="school-name">
+                    <a href="index2.html">FUTURE UNIVERSITY ~ STUDENT MANAGEMENT SYSTEM</a>
+                </div>
+            </section>
+
+            <!--Header Bell and Message icon section-->
+            <section class="right-school-div">
+                <div id="bell-icon"></div>
+                <div id="message-icon"></div>
+            </section>
+
+        </header>
+        <!------------------------>
+
+        <!--Welcome and Student Button section-->
+        <section class="welcome-section">
+            <h1>WELCOME, Vuslat Sülbiye Türk</h1>
+        </section>
+    
+        <!------------------------>
+
+        <!-- Listing All Existing Students Section-->
+        <section id="students" style="display: none;">
+            <div id="student-info">
+            </div>
+        </section>
+
+        <!-- Listing all lectures section-->
+        <section class="lectures">
+
+            <!-- Seacrh container div for seacrh lectures -->
+            <div class="search-container" oninput="filterLectures()">
+                <input type="text" id="search-input" placeholder="Search Courses By Name Or ID..." />
+                <button id="search-button">
+                    <i class="fa fa-search"></i> <!-- Font Awesome icon -->
+                </button>
+            </div>
+
+            <!-- Listing all lectures div -->
+            <div id="lectures-container">
+            </div>
+
+            <!-- Listing all studnets for each class popup div -->
+            <div id="student-popup" class="popup" style="display: none;">
+                <div id="popup-content">
+                    <div class="popup-title">
+                        <h2 id="popup-title"></h2>
+                    </div>
+
+                    <!-- Search container for searching students -->
+                    <div class="search-container">
+                        <input type="text" id="search-student-input" placeholder="Search Courses By Name Or ID..."
+                            oninput="searchStudents()" />
+                        <button id="search-button" onclick="searchStudents()">
+                            <i class="fa fa-search"></i> <!-- Font Awesome icon -->
+                        </button>
+                    </div>
+
+                    <!-- Table div for showing all students and their information-->
+                    <table id="student-table"></table>
+
+                </div>
+
+                <!-- Add student button -->
+                <button onclick="toggleAddStudentForm()" class="student-btn">Add Student</button>
+
+                <!-- Form div for adding new student -->
+                <div id="add-student-form" style="display: none;">
+                    <label for="course-id">Student Id:</label>
+                    <input type="text" id="new-studentId" placeholder="Enter Student Id" />
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="new-student-firstName" placeholder="Enter student first name" />
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="new-student-lastName" placeholder="Enter student last name" />
+                    <label for="midterm">Midterm:</label>
+                    <input type="text" id="new-midterm" placeholder="Enter student midterm" />
+                    <label for="final">Final:</label>
+                    <input type="text" id="new-final" placeholder="Enter student final" />
+                    <button onclick="addStudent()" class="close-detail-button">Save</button>
+                    <button onclick="toggleAddStudentForm()" class="close-detail-button">Cancel</button>
+                </div>
+
+                <!-- Close button for closing student popup div-->
+                <button onclick="closeStudentPopup()" class="student-btn">Close</button>
+            </div>
+
+            <!-- Add course button for adding new course -->
+            <button id="add-course-button" onclick="openForm()">Add Course</button>
+
+            <!-- Form div for adding new course -->
+            <div id="course-form" style="display: none;">
+                <form id="new-course-form">
+                    <label for="course-id">Course Id:</label>
+                    <input type="text" id="course-id" required>
+
+                    <label for="course-name">Course Name:</label>
+                    <input type="text" id="course-name" required>
+
+                    <label for="instructor">Instructor:</label>
+                    <input type="text" id="instructor" required>
+
+                    <label for="pointScale">Point Scale:</label>
+                    <select id="pointScale">
+                        <option value="7">7</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <label for="credite">Credit:</label>
+                    <select id="credit">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <button type="button" onclick="saveCourse()">Save Course</button>
+                    <button type="button" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </section>
+
+        <!------------------------>
+
+        <!--Footer part of the page-->
+        <footer>
+            <section class="left-school-div">
+                <!--School logo part-->
+                <a href="index2.html">
+                    <div id="footer-logo">
+                    </div>
+                </a>
+                <!--School name part-->
+                <div class="school-name" id="footer-school-name">
+                    <a href="index2.html">FUTURE UNIVERSITY <br> Copyright © Future University - 1927</a>
+                </div>
+            </section>
+        </footer>
+        <!------------------------>
+
+    </main>
+</body>
+
+</html>

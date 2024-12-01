@@ -1,0 +1,415 @@
+/* Reset the page to its original values*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;  
+    align-items: center; 
+}
+
+/*****************************/
+/* School Header CSS */
+
+.school-header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.left-school-div{
+    display: flex;
+    height: 8vh;
+    width: 90%;
+}
+.school-logo{
+    background-image: url('../images/shool-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 8vh;
+    aspect-ratio: 1 / 1;
+    margin-left: 2vh;
+}
+.school-name{
+    width: 50%;
+    height: 8vh; 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: calc(1vh + 1vw - 1%);
+}
+.school-name a{
+    text-decoration: none;
+    color: #0f0439;
+}
+
+.right-school-div{
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+}
+#bell-icon{
+    width: 4vh;
+    aspect-ratio: 1 / 1;
+    background-image: url('../images/bell.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#message-icon{
+    width: 4vh;
+    aspect-ratio: 1 / 1;
+    background-image: url('../images/message.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 3vh 0 5vh;
+}
+#bell-icon:hover , #message-icon:hover{
+    width: 5vh;
+    aspect-ratio: 1 / 1;
+}
+
+/*****************************/
+/*Welcome section and student button css*/
+
+.welcome-section{
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+    padding: 2vh;
+    color: #0f0439;
+}
+
+/*****************************/
+/*Students listing div css*/
+
+#students{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    min-height: 200px;
+    margin-bottom: 5px;
+}
+
+/*****************************/
+/* Lecture section and its divs css*/
+
+.lectures{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 500px;
+    margin-bottom: 8px;
+}
+
+/*****************************/
+/* Seacrh containers css*/
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+#search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+#search-student-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+#search-button {
+    padding: 10px;
+    border: 1px solid #0f0439;
+    background-color: #0f0439;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+}
+#search-button i {
+    font-size: 18px;
+}
+#search-button:hover {
+    background-color: white;
+    color: #0f0439;
+}
+
+/*****************************/
+
+#lectures-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.each-lecture-div{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    min-height: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0);
+   
+    border: 1px solid #0f0439;
+}
+button.lecture-btn {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; 
+    min-height: 70px;
+}
+button {
+    width: 20%;
+    height: 70px;
+    font-size: calc(0.5vh + 1vw - 1%);
+    background-color: white;
+    color: #0f0439;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    background-color: #0f0439;
+    color: white;
+}
+
+.student-btn{
+    background-color: #0f0439;
+    color: white;
+    width: 10%;
+    height: 10%;
+    padding: 2px 2px;
+    margin: 0px 1vw;
+}
+.student-btn:hover {
+    background-color: #0f0439;
+    color: white;
+}
+
+#add-course-button{
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Form container */
+#course-form form {
+    color: #0f0439;
+    gap: 10px;
+    width: 300px;
+    margin: 10px auto;
+}
+
+/* Input fields */
+#course-form input, #course-form select {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#course-form button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Style for the Cancel and Save buttons */
+#course-form button[type="button"] {
+    width: 40%;
+    height: 20%;
+    font-size: calc(0.75vh + 0.75vw );
+    margin: 10px;
+    padding: 7px 5px;
+    cursor: pointer;
+}
+
+div[id^="lecture-info-"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    color: #0f0439;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 10px;
+    padding: 7px 0px;
+    border: 2px solid #0f0439;
+}
+.lecture-detail-div{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+    margin: 7px 0px;
+    font-size: calc(0.5vh + 1vw - 1%);
+}
+.lecture-detail-div input, .lecture-detail-div select {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    margin: 2px 2px;
+    box-sizing: border-box;
+}
+.close-detail-button{
+    background-color: #0f0439;
+    color: white;
+    width: 10%;
+    height: 10%;
+    padding: 2px 2px;
+    margin: 0px 1vw;
+}
+
+/*****************************/
+/* Student popup div css*/
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Tüm kenarlarda eşit gölge */
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    color: #0f0439;
+    overflow-y: scroll;
+}
+.popup-title{
+    margin: 15px auto;
+    font-size: calc(1vh + 1vw - 1%);
+}
+
+#popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#student-popup .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#student-table{
+    width: 90%;
+    height: 80%;
+    border: 1px solid #0f0439;
+}
+#student-table th, #student-table td{
+    width: 10%;
+    height: 20%;
+    border: 1px solid #0f0439;
+    font-size: calc(0.5vh + 1vw - 1%);
+    padding: 3px;
+    text-align: center;
+}
+
+.edit-student-div{
+    display: flex;
+    gap: 0.5%;          
+    width: 100%;
+    font-size: calc(0.5vh + 0.5vw - 0.5%);
+}
+
+.edit-student-div input {
+    flex: 1;
+    width: 12%;
+    height: 7%;
+    font-size: calc(0.5vh + 0.5vw - 0.5%);
+    padding: 8px;
+    border: 1px solid #0f0439;
+    border-radius: 4px;
+}
+
+#add-student-form {
+    margin: 10px 0;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#add-student-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #0f0439;
+    border-radius: 4px;
+}
+
+.student-action-button{
+    width: 70%;
+    height: 30%;
+    font-size: calc(0.5vh + 0.5vw - 0.5%);
+    background-color: #0f0439;
+    color: white;
+    padding: 3px 1px;
+}
+
+/*****************************/
+/* Footer section css */
+
+footer{
+    width: 100%;
+    height: 6vh;
+}
+#footer-logo{
+    background-image: url('../images/shool-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 5vh;
+    aspect-ratio: 1 / 1;
+    margin-left: 2vh;
+}
+#footer-school-name{
+    width: 30%;
+    height: 6vh; 
+    font-size: calc(0.5vh + 0.5vw - 0.5%);
+}
